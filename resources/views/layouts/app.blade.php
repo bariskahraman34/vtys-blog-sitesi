@@ -31,13 +31,10 @@
                 <li class="nav-item">
                   <a href="/" class="link">Tüm Bloglar</a>
                 </li>
-                {{-- @foreach($topCategories as $category)
-                    <li class="nav-item"><a class="link" href="{{url('/?kategori='.$category->id)}}">{{ $category->kategoriAdi }}</a></li>
-                @endforeach --}}
                 @foreach($topCategories as $category)
                 <li class="nav-item">
                     <a class="link" href="{{ url('/?kategori='.$category->id) }}">
-                        {{ $category->kategoriAdi }} ({{ $category->bloglar_count }})
+                        {{ $category->kategoriAdi }}
                     </a>
                 </li>
                 @endforeach
